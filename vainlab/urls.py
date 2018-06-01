@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import views
+
+appname = 'vainlab'
 urlpatterns = [
+    path('', views.index),
+    # path('player/', views.player_matches, name='player_matches'),
+    path('player/<slug:slug>', views.PlayerView.as_view(), name='player'),
+    path('players/', views.PlayersView.as_view(), name='players'),
     path('admin/', admin.site.urls),
 ]

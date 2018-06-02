@@ -10,30 +10,38 @@
 
 {% block content %}
 
-<div class="">
+<div class="wrapper">
 
   <!-- Header -->
-  <div class="header">
-    <a href="{% url 'index' %}">
-      <img src="{% static 'vainlab/vainlab-logo_pink.svg' %}" class="h-36">
-    </a>
-    <div class="search-form">
-      {% include "vainlab/search-ign.html" %}
+  <div class="">
+    <div class="header">
+      <a href="{% url 'index' %}">
+        <img src="{% static 'vainlab/vainlab-logo_pink.svg' %}" class="h-36 m-7">
+      </a>
+      <div class="search-form m-7">
+        {% include "vainlab/search-ign.html" %}
+      </div>
     </div>
   </div>
 
-  <div class="flex-column flex-center" id="rankings">
-    {% for _, r in rankings %}
-    <div class="flex-row card flex-align-center w-min-300 flex-justify-around">
-      <i class="sprite-hero-64-{{ r.actor }}_Portrait circle"></i>
-      勝率 {{ r.win_rate }}%
+
+  <div class="container">
+    <div class="flex-column flex-center" id="rankings">
+      {% for _, r in rankings %}
+      <div class="flex-row card flex-align-center w-min-250 flex-justify-around">
+        <i class="sprite-hero-64-{{ r.actor }}_Portrait circle"></i>
+        <span>{{ r.actor }}</span>
+        勝率 {{ r.win_rate }}%
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 
 
-  <div class="footer">
-    {% include "vainlab/footer.html" %}
+  <div class="">
+    <div class="footer">
+      {% include "vainlab/footer.html" %}
+    </div>
   </div>
 
 </div>

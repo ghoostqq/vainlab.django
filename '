@@ -1,0 +1,12 @@
+[uwsgi]
+chdir=/Users/qiushi/workspace/vainlab.django/
+module=vainlab.wsgi:application
+check-static=vainlab/static/
+check-static=vainlab/static/vainlab
+master=True
+socket = /tmp/uwsgi.sock
+chmod-socket = 666
+vacuum=True
+max-requests=5000
+#daemonize=/var/log/uwsgi/vainlab.django.log
+daemonize=/Users/qiushi/vainlab.django.log

@@ -113,7 +113,8 @@ class VainAPI:
             if i['type'] == 'participant':
                 p = Participant(
                     id=i['id'],
-                    actor=i['attributes']['actor'],
+                    # Assuming like '*Vox*' -> 'Vox'
+                    actor=i['attributes']['actor'][1:-1],
                     shard=i['attributes']['shardId'],
                     kills=i['attributes']['stats']['kills'],
                     deaths=i['attributes']['stats']['deaths'],

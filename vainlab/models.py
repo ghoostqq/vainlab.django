@@ -3,6 +3,7 @@ import json
 
 from django.db import models as m
 from django.utils import timezone
+from django_pandas.io import read_frame
 
 MODE_JA = {
     'casual':                           'カジュアル',
@@ -119,3 +120,12 @@ class Participant(m.Model):
 
     def side_class(self):
         return self.side.replace('/', '-')
+
+
+def top_actor_win_rates(participant_class):
+    ''' returns generate index and row '''
+    df = read_frame(participant_class.objects.all(), ['actor', 'won'])
+    rank = df.groupby('actor', as_index=False).mean(
+    ).sort_values(by='won', ascending=False)
+    rank['win_rate'] = rank.won.apply(lambda x: '%.2f' % (x * 100))
+    return rank.iterrows()

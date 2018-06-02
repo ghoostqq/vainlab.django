@@ -20,6 +20,7 @@ function prepare () {
 }
 prepare hero 116 hero-116-80
 prepare hero 80 hero-116-80
+prepare hero 64 hero-64
 prepare hero 32 hero-32
 prepare items 48 items-48-38
 prepare items 38 items-48-38

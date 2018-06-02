@@ -1,4 +1,4 @@
-<form id="search-ign" action="" method="post">
+<form id="search-ign" action="{% url 'search_player' %}" method="post">
   {% csrf_token %}
   {{ form }}
   <button type="submit" name="action" value="send"><i class="fas fa-search" title="検索"></i></button>

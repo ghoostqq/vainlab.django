@@ -22,10 +22,12 @@ appname = 'vainlab'
 urlpatterns = [
     path('', views.index, name='index'),
     # path('player/', views.player_matches, name='player_matches'),
-    path('player/<slug:slug>/', views.PlayerView.as_view(), name='player'),
+    path('single_player/<slug:slug>/', views.PlayerView.as_view(), name='player'),
     path('players/', views.PlayersView.as_view(), name='players'),
-    path('player/<str:name>/matches/',
+    path('player/<str:name>/',
          views.player_matches, name='player_matches'),
+    path('search_player/', views.search_player, name='search_player'),
     #path('form/', views.form, name='form'),
+    path('rankings/', views.ranking, name='rankings'),
     path('admin/', admin.site.urls),
 ]

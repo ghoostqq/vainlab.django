@@ -6,8 +6,9 @@ from django.utils import timezone
 
 class Player(m.Model):
     id = m.CharField(max_length=100, unique=True, primary_key=True)
-    name = m.CharField(max_length=50)
-    slug = m.SlugField(max_length=50)
+    name = m.CharField(max_length=50, db_index=True)
+    # slug = m.SlugField(max_length=50)
+    # name = m.SlugField(max_length=50)
     shard = m.CharField('region', max_length=10)
     elo = m.PositiveSmallIntegerField(default=0)  # 0 to 32767
     tier = m.PositiveSmallIntegerField(default=0)
@@ -24,6 +25,7 @@ class Match(m.Model):
     players = m.ManyToManyField(Player)
 
     id = m.CharField(max_length=100, unique=True, primary_key=True)
+    datetime = m.DateTimeField('when a match is created')
     mode = m.CharField(max_length=50)
     version = m.CharField(max_length=10)
     # has two rosters.
@@ -48,6 +50,7 @@ class Roster(m.Model):
 
 class Participant(m.Model):
     player = m.ForeignKey(Player, on_delete=m.PROTECT)
+    match = m.ForeignKey(Match, on_delete=m.PROTECT)
     roster = m.ForeignKey(Roster, on_delete=m.PROTECT)
 
     id = m.CharField(max_length=100, unique=True, primary_key=True)

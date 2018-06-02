@@ -1,0 +1,25 @@
+{{ m }}
+{% for pa in m.participant_set.iterator %}
+{% if pa.player == player %}
+<strong>{{ pa }}</strong>
+      <div class="m-summary">
+        <div class="role">
+          <div class="won" style="background-color: {% if pa.won %}#ffce2d{% else %}#888888{% endif %};">
+            <img class="hero" src="{# url_for('static', filename='vain/hero-116/' + pa.actor + '_Portrait.png') #}">
+          </div>
+        </div>
+        <div class="mode-won">
+          <span class="mw-mode">{{ m.mode }}</span>
+          <span class="mw-won">{{ pa.won }}</span>
+        </div>
+      </div>
+{% endif %}
+{% endfor %}
+
+{% for r in m.roster_set.iterator %}
+{{ r }}
+{% for pa in r.participant_set.iterator %}
+{{ pa }}
+{% endfor %}
+{% endfor %}
+      <br>

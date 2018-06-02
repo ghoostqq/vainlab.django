@@ -104,6 +104,7 @@ class VainAPI:
         for i in res['data']:
             match = Match(
                 id=i['id'],
+                datetime=i['attributes']['createdAt'],
                 mode=i['attributes']['gameMode'],
                 version=i['attributes']['patchVersion'],
             )
@@ -132,7 +133,7 @@ class VainAPI:
                 p = Player(
                     id=i['id'],
                     name=i['attributes']['name'],
-                    slug=i['attributes']['name'],
+                    # slug=i['attributes']['name'],
                     shard=i['attributes']['shardId'],
                     elo=i['attributes']['stats']['rankPoints']['ranked'],
                     tier=i['attributes']['stats']['skillTier'],
@@ -156,6 +157,7 @@ class VainAPI:
                     tier=i['attributes']['stats']['skillTier'],
                     won=i['attributes']['stats']['winner'],
                     player_id=i['relationships']['player']['data']['id'],
+                    match_id=ro2m[pa2r[i['id']]],
                     roster_id=pa2r[i['id']],
                 )
                 p.save()

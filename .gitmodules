@@ -1,0 +1,3 @@
+[submodule "vainlab/static/vainlab/vainglory-assets"]
+	path = vainlab/static/vainlab/vainglory-assets
+	url = https://github.com/qiugits/vainglory-assets.git

@@ -162,7 +162,7 @@ class VainAPI:
 # ================
 # Utilities
 # ================
-def itemname_to_cssreadable(name):
+def cssreadable(name):
     return name.replace(' ', '-').replace("'", "").lower()
 
 

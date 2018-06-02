@@ -5,7 +5,10 @@
       <div class="m-summary">
         <div class="role">
           <div class="won" style="background-color: {% if pa.won %}#ffce2d{% else %}#888888{% endif %};">
+            <!--
             <img class="hero" src="{% static 'vainlab/hero-116/'|add:pa.actor_strip|add:'_Portrait.png' %}">
+            -->
+            <i class="sprite-hero-116-80-{{ pa.actor_strip }}_Portrait hero"></i>
           </div>
         </div>
         <div class="mode-won">
@@ -22,7 +25,8 @@
           <div class="item-build">
             {% for item in pa.items_list %}
             <div class="single-item">
-              <img src="{% static 'vainlab/items-48/'|add:item|add:'.png' %}">
+              <!-- img src="{% static 'vainlab/items-48/'|add:item|add:'.png' %}" -->
+              <i class="sprite-items-48-38-{{ item }}"></i>
             </div>
             {% endfor %}
           </div>

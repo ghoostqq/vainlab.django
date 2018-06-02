@@ -104,7 +104,7 @@ class Participant(m.Model):
     def items_list(self):
         items = json.loads(self.items)
         css_readable_items = [
-            i.replace(' ', '-').replace("'", "") for i in items]
+            i.replace(' ', '-').replace("'", "").lower() for i in items]
         return css_readable_items
 
     def actor_strip(self):

@@ -2,6 +2,12 @@
 {% load static %}
 
 
+{% block custom_css %}
+<link href="{% static 'vainlab/style.css' %}" rel="stylesheet">
+<link href="{% static 'vainlab/sprite/hero-32.css' %}" rel="stylesheet">
+{% endblock %}
+
+
 {% block content %}
 {# error #}
 {# player #}
@@ -11,11 +17,11 @@
 
   <!-- Header -->
   <div class="header">
-    <a href="{# url_for('vain.index') #}">
+    <a href="{% url 'index' %}">
       <img src="{% static 'vainlab/vainlab-logo_pink.svg' %}">
     </a>
     <div class="search-form">
-      {# include "vain/search-ign.html" #}
+      {% include "vainlab/search-ign.html" %}
     </div>
   </div>
 
@@ -26,7 +32,7 @@
 
     <!-- Player card -->
     <div class="player-info">
-      <div class="player-tier" style="background-image: url( {# url_for('static', filename='vain/tiers-cropped/t{}.png'.format(player.tier)) #} );">
+      <div class="player-tier" style="background-image: url( {% static 'vainlab/tiers-cropped/t'|add:player.tier_str|add:'.png' %} );">
         <div class="player-name-stats">
           <h1 id="player-name">{{ player.name }}</h1>
           <p>
@@ -39,13 +45,15 @@
 
     <!-- Matches -->
     {% for m in matches %}
-    {% include "vainlab/_match.html" %}
+    <div class="single-match">
+      {% include "vainlab/_match.html" %}
+    </div>
     {% endfor %}
     {% endif %}
   </div>
 
   <div class="footer">
-    {# include "vain/footer.html" #}
+    {% include "vainlab/footer.html" %}
   </div>
 </div>
 

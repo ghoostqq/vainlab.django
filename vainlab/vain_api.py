@@ -8,19 +8,6 @@ from .models import Match, Participant, Player, Roster
 # from .models import Item, Match, Participant, Player, Roster
 
 SHARDS = ['ea', 'na', 'sg', 'eu', 'sa', 'cn']
-MODE_JA = {
-    'casual':                           'カジュアル',
-    'ranked':                           'ランク',
-    'casual_aral':                      '大乱闘',
-    'blitz_pvp_ranked':                 '電撃',
-    'blitz_rounds_pvp_casual':          'ガチンコ',
-    'private':                          'プラベカジュ',
-    'private_party_draft_match':        'プラベドラフト',
-    'private_party_aral_match':         'プラベ大乱闘',
-    'private_party_blitz_match':        'プラベ電撃',
-    'private_party_blitz_rounds_match': 'プラベガチンコ',
-    '5v5_pvp_casual':                   '5V5カジュ',
-}
 
 
 class VainAPI:
@@ -153,7 +140,8 @@ class VainAPI:
                     # kda
                     gold=i['attributes']['stats']['gold'],
                     farm=i['attributes']['stats']['farm'],
-                    items=json.dumps(i['attributes']['stats']['items']),
+                    items=json.dumps(i['attributes']['stats']
+                                     ['items'][::-1][:6][::-1]),
                     tier=i['attributes']['stats']['skillTier'],
                     won=i['attributes']['stats']['winner'],
                     player_id=i['relationships']['player']['data']['id'],

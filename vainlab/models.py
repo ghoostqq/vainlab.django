@@ -3,6 +3,20 @@ import json
 from django.db import models as m
 from django.utils import timezone
 
+MODE_JA = {
+    'casual':                           'カジュアル',
+    'ranked':                           'ランク',
+    'casual_aral':                      '大乱闘',
+    'blitz_pvp_ranked':                 '電撃',
+    'blitz_rounds_pvp_casual':          'ガチンコ',
+    'private':                          'プラベカジュ',
+    'private_party_draft_match':        'プラベドラフト',
+    'private_party_aral_match':         'プラベ大乱闘',
+    'private_party_blitz_match':        'プラベ電撃',
+    'private_party_blitz_rounds_match': 'プラベガチンコ',
+    '5v5_pvp_casual':                   '5V5カジュ',
+}
+
 
 class Player(m.Model):
     id = m.CharField(max_length=100, unique=True, primary_key=True)
@@ -14,11 +28,13 @@ class Player(m.Model):
     tier = m.PositiveSmallIntegerField(default=0)
     wins = m.PositiveIntegerField(default=0)
 
-    last_searched_matches_at = m.DateTimeField(
-        'last time searched for matches', default=timezone.now)
+    # last_searched_matches_at = m.DateTimeField('last time searched for matches', default=timezone.now)
 
     def __str__(self):
         return self.name
+
+    def tier_str(self):
+        return str(self.tier)
 
 
 class Match(m.Model):
@@ -32,6 +48,9 @@ class Match(m.Model):
 
     def __str__(self):
         return self.mode
+
+    def mode_ja(self):
+        return MODE_JA.get(self.mode, self.mode)
 
 
 class Roster(m.Model):
@@ -70,5 +89,24 @@ class Participant(m.Model):
     def __str__(self):
         return self.actor
 
-    def list_items(self):
-        return json.loads(self.items)
+    def won_ja(self):
+        return ('敗北', '勝利')[self.won]
+
+    def items_list(self):
+        items = json.loads(self.items)
+        css_readable_items = [
+            i.replace(' ', '-').replace("'", "") for i in items]
+        return css_readable_items
+
+    def actor_strip(self):
+        return self.actor.replace('*', '')
+
+    def kda(self):
+        # KDA http://vainglory.pchw.io/entry/2016/02/29/092408
+        return '%.2f' % ((self.kills + self.assists) / (self.deaths + 1))
+
+    def side_color(self):
+        return self.side.split('/')[1]
+
+    def side_class(self):
+        return self.side.replace('/', '-')

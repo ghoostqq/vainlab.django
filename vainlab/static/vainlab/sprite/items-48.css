@@ -1,0 +1,165 @@
+/* glue: 0.13 hash: 788e612a5b */
+/* qiu's edit */
+.sprite-items-48-weapon-infusion,.sprite-items-48-weapon-blade,.sprite-items-48-war-treads,.sprite-items-48-void-battery,.sprite-items-48-tyrants-monocle,.sprite-items-48-travel-boots,.sprite-items-48-tornado-trigger,.sprite-items-48-tension-bow,.sprite-items-48-swift-shooter,.sprite-items-48-stormguard-banner,.sprite-items-48-stormcrown,.sprite-items-48-sprint-boots,.sprite-items-48-spellsword,.sprite-items-48-spellfire,.sprite-items-48-sorrowblade,.sprite-items-48-slumbering-husk,.sprite-items-48-six-sins,.sprite-items-48-shiversteel,.sprite-items-48-shatterglass,.sprite-items-48-serpent-mask,.sprite-items-48-scout-trap,.sprite-items-48-reflex-block,.sprite-items-48-protector-contract,.sprite-items-48-pot-of-gold,.sprite-items-48-poisoned-shiv,.sprite-items-48-piercing-spear,.sprite-items-48-piercing-shard,.sprite-items-48-oakheart,.sprite-items-48-nullwave-gauntlet,.sprite-items-48-minions-foot,.sprite-items-48-minion-candy,.sprite-items-48-metal-jacket,.sprite-items-48-lucky-strike,.sprite-items-48-light-shield,.sprite-items-48-light-armor,.sprite-items-48-lifespring,.sprite-items-48-level-juice,.sprite-items-48-kinetic-shield,.sprite-items-48-journey-boots,.sprite-items-48-ironguard-contract,.sprite-items-48-hourglass,.sprite-items-48-heavy-steel,.sprite-items-48-heavy-prism,.sprite-items-48-healing-flask,.sprite-items-48-halcyon-potion,.sprite-items-48-halcyon-chargers,.sprite-items-48-frostburn,.sprite-items-48-fountain-of-renewal,.sprite-items-48-flaregun,.sprite-items-48-flare,.sprite-items-48-eve-of-harvest,.sprite-items-48-energy-battery,.sprite-items-48-eclipse-prism,.sprite-items-48-echo,.sprite-items-48-dragons-eye,.sprite-items-48-dragonheart,.sprite-items-48-dragonblood-contract,.sprite-items-48-crystal-infusion,.sprite-items-48-crystal-bit,.sprite-items-48-crucible,.sprite-items-48-contraption,.sprite-items-48-coat-of-plates,.sprite-items-48-clockwork,.sprite-items-48-chronograph,.sprite-items-48-broken-myth,.sprite-items-48-breaking-point,.sprite-items-48-book-of-eulogies,.sprite-items-48-bonesaw,.sprite-items-48-blazing-salvo,.sprite-items-48-barbed-needle,.sprite-items-48-atlas-pauldron,.sprite-items-48-alternating-current,.sprite-items-48-aftershock,.sprite-items-48-aegis {
+    background-image: url('items-48.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-items-48-weapon-infusion { width: 48px; height: 48px; background-position: 0 0; }
+
+.sprite-items-48-weapon-blade { width: 48px; height: 48px; background-position: -48px 0; }
+
+.sprite-items-48-war-treads { width: 48px; height: 48px; background-position: 0 -48px; }
+
+.sprite-items-48-void-battery { width: 48px; height: 48px; background-position: -48px -48px; }
+
+.sprite-items-48-tyrants-monocle { width: 48px; height: 48px; background-position: -96px 0; }
+
+.sprite-items-48-travel-boots { width: 48px; height: 48px; background-position: -96px -48px; }
+
+.sprite-items-48-tornado-trigger { width: 48px; height: 48px; background-position: 0 -96px; }
+
+.sprite-items-48-tension-bow { width: 48px; height: 48px; background-position: -48px -96px; }
+
+.sprite-items-48-swift-shooter { width: 48px; height: 48px; background-position: -96px -96px; }
+
+.sprite-items-48-stormguard-banner { width: 48px; height: 48px; background-position: -144px 0; }
+
+.sprite-items-48-stormcrown { width: 48px; height: 48px; background-position: -144px -48px; }
+
+.sprite-items-48-sprint-boots { width: 48px; height: 48px; background-position: -144px -96px; }
+
+.sprite-items-48-spellsword { width: 48px; height: 48px; background-position: 0 -144px; }
+
+.sprite-items-48-spellfire { width: 48px; height: 48px; background-position: -48px -144px; }
+
+.sprite-items-48-sorrowblade { width: 48px; height: 48px; background-position: -96px -144px; }
+
+.sprite-items-48-slumbering-husk { width: 48px; height: 48px; background-position: -144px -144px; }
+
+.sprite-items-48-six-sins { width: 48px; height: 48px; background-position: -192px 0; }
+
+.sprite-items-48-shiversteel { width: 48px; height: 48px; background-position: -192px -48px; }
+
+.sprite-items-48-shatterglass { width: 48px; height: 48px; background-position: -192px -96px; }
+
+.sprite-items-48-serpent-mask { width: 48px; height: 48px; background-position: -192px -144px; }
+
+.sprite-items-48-scout-trap { width: 48px; height: 48px; background-position: 0 -192px; }
+
+.sprite-items-48-reflex-block { width: 48px; height: 48px; background-position: -48px -192px; }
+
+.sprite-items-48-protector-contract { width: 48px; height: 48px; background-position: -96px -192px; }
+
+.sprite-items-48-pot-of-gold { width: 48px; height: 48px; background-position: -144px -192px; }
+
+.sprite-items-48-poisoned-shiv { width: 48px; height: 48px; background-position: -192px -192px; }
+
+.sprite-items-48-piercing-spear { width: 48px; height: 48px; background-position: -240px 0; }
+
+.sprite-items-48-piercing-shard { width: 48px; height: 48px; background-position: -240px -48px; }
+
+.sprite-items-48-oakheart { width: 48px; height: 48px; background-position: -240px -96px; }
+
+.sprite-items-48-nullwave-gauntlet { width: 48px; height: 48px; background-position: -240px -144px; }
+
+.sprite-items-48-minions-foot { width: 48px; height: 48px; background-position: -240px -192px; }
+
+.sprite-items-48-minion-candy { width: 48px; height: 48px; background-position: 0 -240px; }
+
+.sprite-items-48-metal-jacket { width: 48px; height: 48px; background-position: -48px -240px; }
+
+.sprite-items-48-lucky-strike { width: 48px; height: 48px; background-position: -96px -240px; }
+
+.sprite-items-48-light-shield { width: 48px; height: 48px; background-position: -144px -240px; }
+
+.sprite-items-48-light-armor { width: 48px; height: 48px; background-position: -192px -240px; }
+
+.sprite-items-48-lifespring { width: 48px; height: 48px; background-position: -240px -240px; }
+
+.sprite-items-48-level-juice { width: 48px; height: 48px; background-position: -288px 0; }
+
+.sprite-items-48-kinetic-shield { width: 48px; height: 48px; background-position: -288px -48px; }
+
+.sprite-items-48-journey-boots { width: 48px; height: 48px; background-position: -288px -96px; }
+
+.sprite-items-48-ironguard-contract { width: 48px; height: 48px; background-position: -288px -144px; }
+
+.sprite-items-48-hourglass { width: 48px; height: 48px; background-position: -288px -192px; }
+
+.sprite-items-48-heavy-steel { width: 48px; height: 48px; background-position: -288px -240px; }
+
+.sprite-items-48-heavy-prism { width: 48px; height: 48px; background-position: 0 -288px; }
+
+.sprite-items-48-healing-flask { width: 48px; height: 48px; background-position: -48px -288px; }
+
+.sprite-items-48-halcyon-potion { width: 48px; height: 48px; background-position: -96px -288px; }
+
+.sprite-items-48-halcyon-chargers { width: 48px; height: 48px; background-position: -144px -288px; }
+
+.sprite-items-48-frostburn { width: 48px; height: 48px; background-position: -192px -288px; }
+
+.sprite-items-48-fountain-of-renewal { width: 48px; height: 48px; background-position: -240px -288px; }
+
+.sprite-items-48-flaregun { width: 48px; height: 48px; background-position: -288px -288px; }
+
+.sprite-items-48-flare { width: 48px; height: 48px; background-position: -336px 0; }
+
+.sprite-items-48-eve-of-harvest { width: 48px; height: 48px; background-position: -336px -48px; }
+
+.sprite-items-48-energy-battery { width: 48px; height: 48px; background-position: -336px -96px; }
+
+.sprite-items-48-eclipse-prism { width: 48px; height: 48px; background-position: -336px -144px; }
+
+.sprite-items-48-echo { width: 48px; height: 48px; background-position: -336px -192px; }
+
+.sprite-items-48-dragons-eye { width: 48px; height: 48px; background-position: -336px -240px; }
+
+.sprite-items-48-dragonheart { width: 48px; height: 48px; background-position: -336px -288px; }
+
+.sprite-items-48-dragonblood-contract { width: 48px; height: 48px; background-position: 0 -336px; }
+
+.sprite-items-48-crystal-infusion { width: 48px; height: 48px; background-position: -48px -336px; }
+
+.sprite-items-48-crystal-bit { width: 48px; height: 48px; background-position: -96px -336px; }
+
+.sprite-items-48-crucible { width: 48px; height: 48px; background-position: -144px -336px; }
+
+.sprite-items-48-contraption { width: 48px; height: 48px; background-position: -192px -336px; }
+
+.sprite-items-48-coat-of-plates { width: 48px; height: 48px; background-position: -240px -336px; }
+
+.sprite-items-48-clockwork { width: 48px; height: 48px; background-position: -288px -336px; }
+
+.sprite-items-48-chronograph { width: 48px; height: 48px; background-position: -336px -336px; }
+
+.sprite-items-48-broken-myth { width: 48px; height: 48px; background-position: -384px 0; }
+
+.sprite-items-48-breaking-point { width: 48px; height: 48px; background-position: -384px -48px; }
+
+.sprite-items-48-book-of-eulogies { width: 48px; height: 48px; background-position: -384px -96px; }
+
+.sprite-items-48-bonesaw { width: 48px; height: 48px; background-position: -384px -144px; }
+
+.sprite-items-48-blazing-salvo { width: 48px; height: 48px; background-position: -384px -192px; }
+
+.sprite-items-48-barbed-needle { width: 48px; height: 48px; background-position: -384px -240px; }
+
+.sprite-items-48-atlas-pauldron { width: 48px; height: 48px; background-position: -384px -288px; }
+
+.sprite-items-48-alternating-current { width: 48px; height: 48px; background-position: -384px -336px; }
+
+.sprite-items-48-aftershock { width: 48px; height: 48px; background-position: 0 -384px; }
+
+.sprite-items-48-aegis { width: 48px; height: 48px; background-position: -48px -384px; }
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+    .sprite-items-48-weapon-infusion, .sprite-items-48-weapon-blade, .sprite-items-48-war-treads, .sprite-items-48-void-battery, .sprite-items-48-tyrants-monocle, .sprite-items-48-travel-boots, .sprite-items-48-tornado-trigger, .sprite-items-48-tension-bow, .sprite-items-48-swift-shooter, .sprite-items-48-stormguard-banner, .sprite-items-48-stormcrown, .sprite-items-48-sprint-boots, .sprite-items-48-spellsword, .sprite-items-48-spellfire, .sprite-items-48-sorrowblade, .sprite-items-48-slumbering-husk, .sprite-items-48-six-sins, .sprite-items-48-shiversteel, .sprite-items-48-shatterglass, .sprite-items-48-serpent-mask, .sprite-items-48-scout-trap, .sprite-items-48-reflex-block, .sprite-items-48-protector-contract, .sprite-items-48-pot-of-gold, .sprite-items-48-poisoned-shiv, .sprite-items-48-piercing-spear, .sprite-items-48-piercing-shard, .sprite-items-48-oakheart, .sprite-items-48-nullwave-gauntlet, .sprite-items-48-minions-foot, .sprite-items-48-minion-candy, .sprite-items-48-metal-jacket, .sprite-items-48-lucky-strike, .sprite-items-48-light-shield, .sprite-items-48-light-armor, .sprite-items-48-lifespring, .sprite-items-48-level-juice, .sprite-items-48-kinetic-shield, .sprite-items-48-journey-boots, .sprite-items-48-ironguard-contract, .sprite-items-48-hourglass, .sprite-items-48-heavy-steel, .sprite-items-48-heavy-prism, .sprite-items-48-healing-flask, .sprite-items-48-halcyon-potion, .sprite-items-48-halcyon-chargers, .sprite-items-48-frostburn, .sprite-items-48-fountain-of-renewal, .sprite-items-48-flaregun, .sprite-items-48-flare, .sprite-items-48-eve-of-harvest, .sprite-items-48-energy-battery, .sprite-items-48-eclipse-prism, .sprite-items-48-echo, .sprite-items-48-dragons-eye, .sprite-items-48-dragonheart, .sprite-items-48-dragonblood-contract, .sprite-items-48-crystal-infusion, .sprite-items-48-crystal-bit, .sprite-items-48-crucible, .sprite-items-48-contraption, .sprite-items-48-coat-of-plates, .sprite-items-48-clockwork, .sprite-items-48-chronograph, .sprite-items-48-broken-myth, .sprite-items-48-breaking-point, .sprite-items-48-book-of-eulogies, .sprite-items-48-bonesaw, .sprite-items-48-blazing-salvo, .sprite-items-48-barbed-needle, .sprite-items-48-atlas-pauldron, .sprite-items-48-alternating-current, .sprite-items-48-aftershock, .sprite-items-48-aegis {
+        background-image: url('items-48.png');
+        -webkit-background-size: 432px 432px;
+        -moz-background-size: 432px 432px;
+        background-size: 432px 432px;
+    }
+}

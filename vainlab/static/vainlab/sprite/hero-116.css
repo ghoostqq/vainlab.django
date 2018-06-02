@@ -1,0 +1,93 @@
+/* glue: 0.13 hash: ac3f54b13a */
+/* qiu's edit */
+.sprite-hero-116-Vox_Portrait,.sprite-hero-116-Varya_Portrait,.sprite-hero-116-Taka_Portrait,.sprite-hero-116-Skye_Portrait,.sprite-hero-116-Skaarf_Portrait,.sprite-hero-116-Samuel_Portrait,.sprite-hero-116-SAW_Portrait,.sprite-hero-116-Rona_Portrait,.sprite-hero-116-Ringo_Portrait,.sprite-hero-116-Reza_Portrait,.sprite-hero-116-Reim_Portrait,.sprite-hero-116-Phinn_Portrait,.sprite-hero-116-Petal_Portrait,.sprite-hero-116-Ozo_Portrait,.sprite-hero-116-Lyra_Portrait,.sprite-hero-116-Lorelai_Portrait,.sprite-hero-116-Lance_Portrait,.sprite-hero-116-Krul_Portrait,.sprite-hero-116-Koshka_Portrait,.sprite-hero-116-Kestrel_Portrait,.sprite-hero-116-Kensei_Portrait,.sprite-hero-116-Joule_Portrait,.sprite-hero-116-Idris_Portrait,.sprite-hero-116-Gwen_Portrait,.sprite-hero-116-Grumpjaw_Portrait,.sprite-hero-116-Grace_Portrait,.sprite-hero-116-Glaive_Portrait,.sprite-hero-116-Fortress_Portrait,.sprite-hero-116-Flicker_Portrait,.sprite-hero-116-Churnwalker_Portrait,.sprite-hero-116-Celeste_Portrait,.sprite-hero-116-Catherine_Portrait,.sprite-hero-116-Blackfeather_Portrait,.sprite-hero-116-Baron_Portrait,.sprite-hero-116-Baptiste_Portrait,.sprite-hero-116-Ardan_Portrait,.sprite-hero-116-Alpha_Portrait,.sprite-hero-116-Adagio_Portrait {
+    background-image: url('hero-116.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-hero-116-Vox_Portrait { width: 116px; height: 116px; background-position: 0 0; }
+
+.sprite-hero-116-Varya_Portrait { width: 116px; height: 116px; background-position: -116px 0; }
+
+.sprite-hero-116-Taka_Portrait { width: 116px; height: 116px; background-position: 0 -116px; }
+
+.sprite-hero-116-Skye_Portrait { width: 116px; height: 116px; background-position: -116px -116px; }
+
+.sprite-hero-116-Skaarf_Portrait { width: 116px; height: 116px; background-position: -232px 0; }
+
+.sprite-hero-116-Samuel_Portrait { width: 116px; height: 116px; background-position: -232px -116px; }
+
+.sprite-hero-116-SAW_Portrait { width: 116px; height: 116px; background-position: 0 -232px; }
+
+.sprite-hero-116-Rona_Portrait { width: 116px; height: 116px; background-position: -116px -232px; }
+
+.sprite-hero-116-Ringo_Portrait { width: 116px; height: 116px; background-position: -232px -232px; }
+
+.sprite-hero-116-Reza_Portrait { width: 116px; height: 116px; background-position: -348px 0; }
+
+.sprite-hero-116-Reim_Portrait { width: 116px; height: 116px; background-position: -348px -116px; }
+
+.sprite-hero-116-Phinn_Portrait { width: 116px; height: 116px; background-position: -348px -232px; }
+
+.sprite-hero-116-Petal_Portrait { width: 116px; height: 116px; background-position: 0 -348px; }
+
+.sprite-hero-116-Ozo_Portrait { width: 116px; height: 116px; background-position: -116px -348px; }
+
+.sprite-hero-116-Lyra_Portrait { width: 116px; height: 116px; background-position: -232px -348px; }
+
+.sprite-hero-116-Lorelai_Portrait { width: 116px; height: 116px; background-position: -348px -348px; }
+
+.sprite-hero-116-Lance_Portrait { width: 116px; height: 116px; background-position: -464px 0; }
+
+.sprite-hero-116-Krul_Portrait { width: 116px; height: 116px; background-position: -464px -116px; }
+
+.sprite-hero-116-Koshka_Portrait { width: 116px; height: 116px; background-position: -464px -232px; }
+
+.sprite-hero-116-Kestrel_Portrait { width: 116px; height: 116px; background-position: -464px -348px; }
+
+.sprite-hero-116-Kensei_Portrait { width: 116px; height: 116px; background-position: 0 -464px; }
+
+.sprite-hero-116-Joule_Portrait { width: 116px; height: 116px; background-position: -116px -464px; }
+
+.sprite-hero-116-Idris_Portrait { width: 116px; height: 116px; background-position: -232px -464px; }
+
+.sprite-hero-116-Gwen_Portrait { width: 116px; height: 116px; background-position: -348px -464px; }
+
+.sprite-hero-116-Grumpjaw_Portrait { width: 116px; height: 116px; background-position: -464px -464px; }
+
+.sprite-hero-116-Grace_Portrait { width: 116px; height: 116px; background-position: -580px 0; }
+
+.sprite-hero-116-Glaive_Portrait { width: 116px; height: 116px; background-position: -580px -116px; }
+
+.sprite-hero-116-Fortress_Portrait { width: 116px; height: 116px; background-position: -580px -232px; }
+
+.sprite-hero-116-Flicker_Portrait { width: 116px; height: 116px; background-position: -580px -348px; }
+
+.sprite-hero-116-Churnwalker_Portrait { width: 116px; height: 116px; background-position: -580px -464px; }
+
+.sprite-hero-116-Celeste_Portrait { width: 116px; height: 116px; background-position: 0 -580px; }
+
+.sprite-hero-116-Catherine_Portrait { width: 116px; height: 116px; background-position: -116px -580px; }
+
+.sprite-hero-116-Blackfeather_Portrait { width: 116px; height: 116px; background-position: -232px -580px; }
+
+.sprite-hero-116-Baron_Portrait { width: 116px; height: 116px; background-position: -348px -580px; }
+
+.sprite-hero-116-Baptiste_Portrait { width: 116px; height: 116px; background-position: -464px -580px; }
+
+.sprite-hero-116-Ardan_Portrait { width: 116px; height: 116px; background-position: -580px -580px; }
+
+.sprite-hero-116-Alpha_Portrait { width: 116px; height: 116px; background-position: -696px 0; }
+
+.sprite-hero-116-Adagio_Portrait { width: 116px; height: 116px; background-position: -696px -116px; }
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+    .sprite-hero-116-Vox_Portrait, .sprite-hero-116-Varya_Portrait, .sprite-hero-116-Taka_Portrait, .sprite-hero-116-Skye_Portrait, .sprite-hero-116-Skaarf_Portrait, .sprite-hero-116-Samuel_Portrait, .sprite-hero-116-SAW_Portrait, .sprite-hero-116-Rona_Portrait, .sprite-hero-116-Ringo_Portrait, .sprite-hero-116-Reza_Portrait, .sprite-hero-116-Reim_Portrait, .sprite-hero-116-Phinn_Portrait, .sprite-hero-116-Petal_Portrait, .sprite-hero-116-Ozo_Portrait, .sprite-hero-116-Lyra_Portrait, .sprite-hero-116-Lorelai_Portrait, .sprite-hero-116-Lance_Portrait, .sprite-hero-116-Krul_Portrait, .sprite-hero-116-Koshka_Portrait, .sprite-hero-116-Kestrel_Portrait, .sprite-hero-116-Kensei_Portrait, .sprite-hero-116-Joule_Portrait, .sprite-hero-116-Idris_Portrait, .sprite-hero-116-Gwen_Portrait, .sprite-hero-116-Grumpjaw_Portrait, .sprite-hero-116-Grace_Portrait, .sprite-hero-116-Glaive_Portrait, .sprite-hero-116-Fortress_Portrait, .sprite-hero-116-Flicker_Portrait, .sprite-hero-116-Churnwalker_Portrait, .sprite-hero-116-Celeste_Portrait, .sprite-hero-116-Catherine_Portrait, .sprite-hero-116-Blackfeather_Portrait, .sprite-hero-116-Baron_Portrait, .sprite-hero-116-Baptiste_Portrait, .sprite-hero-116-Ardan_Portrait, .sprite-hero-116-Alpha_Portrait, .sprite-hero-116-Adagio_Portrait {
+        background-image: url('hero-116.png');
+        -webkit-background-size: 812px 696px;
+        -moz-background-size: 812px 696px;
+        background-size: 812px 696px;
+    }
+}

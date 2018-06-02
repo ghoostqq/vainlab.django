@@ -24,14 +24,15 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 
     {% block custom_css %}
-    <link href="{% static 'vainlab/style.css' %}" rel="stylesheet">
     {% endblock %}
 
   </head>
   <body>
+    {{ debug }}
 
 
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
 
 
     <!-- Optional JavaScript -->

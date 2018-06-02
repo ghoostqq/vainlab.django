@@ -20,11 +20,12 @@ from . import views
 
 appname = 'vainlab'
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='index'),
     # path('player/', views.player_matches, name='player_matches'),
     path('player/<slug:slug>/', views.PlayerView.as_view(), name='player'),
     path('players/', views.PlayersView.as_view(), name='players'),
     path('player/<str:name>/matches/',
          views.player_matches, name='player_matches'),
+    #path('form/', views.form, name='form'),
     path('admin/', admin.site.urls),
 ]

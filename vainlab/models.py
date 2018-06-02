@@ -1,3 +1,4 @@
+import datetime
 import json
 
 from django.db import models as m
@@ -15,6 +16,7 @@ MODE_JA = {
     'private_party_blitz_match':        'プラベ電撃',
     'private_party_blitz_rounds_match': 'プラベガチンコ',
     '5v5_pvp_casual':                   '5V5カジュ',
+    '5v5_pvp_ranked':                   '5V5ランク',
 }
 
 
@@ -28,13 +30,20 @@ class Player(m.Model):
     tier = m.PositiveSmallIntegerField(default=0)
     wins = m.PositiveIntegerField(default=0)
 
-    # last_searched_matches_at = m.DateTimeField('last time searched for matches', default=timezone.now)
+    last_update_at = m.DateTimeField(
+        'last time searched for matches', default=timezone.now() - datetime.timedelta(minutes=1))
 
     def __str__(self):
         return self.name
 
     def tier_str(self):
         return str(self.tier)
+
+    def spent_enough_cooldown_time(self):
+        return self.last_update_at < (timezone.now() - datetime.timedelta(minutes=1))
+
+    def updated_now(self):
+        self.last_update_at = timezone.now()
 
 
 class Match(m.Model):

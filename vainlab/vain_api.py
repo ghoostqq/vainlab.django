@@ -59,32 +59,13 @@ class VainAPI:
         }
         res = self.request(url, params)
 
-        # ===============
         # Exit if error
-        # ===============
         if res.get('errors', ''):
             return res
 
         # ===============
         # Save to DB
         # ===============
-
-        # No need to do this beneath because using ManyToManyField requires saving first.
-        # ~-~-~-
-        # ro2m = dict()
-        # for i in res['data']:
-        #     for roster in i['relationships']['rosters']['data']:
-        #         ro2m[roster['id']] = i['id']
-        # pa2r = dict()
-        # pl2p = dict()
-        # for i in res['included']:
-        #     if i['type'] == 'roster':
-        #         for participant in i['relationships']['participants']['data']:
-        #             pa2r[participant['id']] = i['id']
-        #     if i['type'] == 'participant':
-        #         player = i['relationships']['player']['data']['id']
-        #         pl2p[player['id']] = i['id']
-
         matches = list()
         ro2m = dict()
         # Match
@@ -155,90 +136,6 @@ class VainAPI:
                 for pa in r.participant_set.all():
                     m.players.add(pa.player)
         return
-
-    def _player_matches(self, reg, ign):
-        url = f'https://api.dc01.gamelockerapp.com/shards/{reg}/matches'
-        params = {
-            'filter[playerNames]': [ign],
-            'sort': '-createdAt',
-        }
-        res = self.request(url, params)
-
-        # ================
-        # Reshape the data
-        # ================
-
-        if res.get('errors', ''):
-            result = res
-        elif True:  # Debug
-            with open('./tmp.json', 'w') as f:
-                json.dump(res, f, indent=3)
-        else:
-
-            # matches is one time only
-            _matches = {i['id']: [i['attributes']['duration'],
-                                  i['attributes']['gameMode'],
-                                  i['attributes']['patchVersion'],
-                                  i['relationships']['rosters']['data']]
-                        for i in res['data']}
-            _rosters = {i['id']: [i['attributes']['stats']['heroKills'],
-                                  i['attributes']['stats']['side'],
-                                  i['attributes']['stats']['turretKills'],
-                                  i['attributes']['stats']['turretsRemaining'],
-                                  i['relationships']['participants']['data']]
-                        for i in res['included'] if i['type'] == 'roster'}
-            # participants is to be saved
-            _participants = {i['id']: [i['attributes']['actor'],
-                                       i['attributes']['shardId'],
-                                       i['attributes']['stats']['kills'],
-                                       i['attributes']['stats']['deaths'],
-                                       i['attributes']['stats']['assists'],
-                                       i['attributes']['stats']['gold'],
-                                       i['attributes']['stats']['farm'],
-                                       i['attributes']['stats']['items'],
-                                       i['attributes']['stats']['skillTier'],
-                                       i['attributes']['stats']['winner'],
-                                       i['relationships']['player']['data']['id']]
-                             for i in res['included'] if i['type'] == 'participant'}
-            players = {
-                i['id']: {
-                    'name':     i['attributes']['name'],
-                    'shard':    i['attributes']['shardId'],
-                    'guild':    i['attributes']['stats']['guildTag'],
-                    'elo':      i['attributes']['stats']['rankPoints']['ranked'],
-                    'tier':     i['attributes']['stats']['skillTier'],
-                    'wins':     i['attributes']['stats']['wins'],
-                }
-                for i in res['included'] if i['type'] == 'player'}
-            participants = {k: {'actor': v[0],
-                                'shard': v[1],
-                                'kills': v[2],
-                                'deaths': v[3],
-                                'assists': v[4],
-                                # KDA
-                                'kda': (v[2] + v[4]) / (v[3] + 1),
-                                'gold': int(v[5]),
-                                'farm': int(v[6]),
-                                'items': v[7][::-1][:6][::-1],
-                                'tier': v[8],
-                                'won': v[9],
-                                'player_id': v[10]}
-                            for k, v in _participants.items()}
-            rosters = {k: {'team_kill_score': v[0],
-                           'side': v[1].replace('/', '-'),
-                           'turret_kill': v[2],
-                           'turret_remain': v[3],
-                           'participants': [participants[data['id']] for data in v[4]]}
-                       for k, v in _rosters.items()}
-            matches = [{'duration': v[0],
-                        'mode': MODE_JA.get(v[1], v[1]),
-                        'version': v[2],
-                        'rosters': [rosters[r['id']] for r in v[3]],
-                        }
-                       for v in _matches.values()]
-            result = {'matches': matches,
-                      'players': players}
-        return result
 
     def _request_without_region(self, ign, method):
         for r in SHARDS:

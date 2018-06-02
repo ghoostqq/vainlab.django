@@ -25,7 +25,7 @@ SECRET_KEY = '=_m94ob+7uhbo$^54zx7!d)x35rse%r&_(ik4ncjzh-)ig%gpq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vainlab.gitshell.net']
 
 
 # Application definition

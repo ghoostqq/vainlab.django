@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from . import views
 
@@ -30,4 +31,4 @@ urlpatterns = [
     #path('form/', views.form, name='form'),
     path('rankings/', views.ranking, name='rankings'),
     path('admin/', admin.site.urls),
-]
+] + staticfiles_urlpatterns()

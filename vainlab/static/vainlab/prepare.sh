@@ -3,6 +3,7 @@ function prepare () {
     # https://askubuntu.com/questions/271776/how-to-resize-an-image-through-the-terminal
     # https://qiita.com/sowd/items/832594dd22d99aebc8a2
     # サイズを変換
+    rm -rf "${1}-${2}"
     mkdir "${1}-${2}"
     for n in $1/*.png; do
         newfname=$(echo "${n}" | sed "s/${1}/${1}-${2}/g")

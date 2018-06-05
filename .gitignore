@@ -1,3 +1,6 @@
 __pycache__/
 db.sqlite3
 db.sqlite3.bak
+vainlab/static/vainlab/hero/
+vainlab/static/vainlab/items/
+tmp.vainlab.django.log
